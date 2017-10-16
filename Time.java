@@ -151,6 +151,13 @@ public class Time
     
     
     /* ------------------ Calculation Methods ------------------------ */
+    public void addSeconds (int n)
+    {
+        int newSec = this.second + n;
+        this.second = newSec % 60;
+        this.addMinutes(newSec / 60);
+    }
+    
     public void addMinutes (int n)
     {
         int newMin = this.minute + n;
